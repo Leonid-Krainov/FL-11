@@ -3,6 +3,8 @@
   flex-direction: $direction;
 }
 
+$font-sizes: ("header": 40px, "logo": 25px, "main": 30px, "section":14px, "banner":15px);
+
 body {
   background: $sectionBackground;
 }
@@ -10,22 +12,23 @@ body {
 .landing-logo {
   @include flex(row);
   align-items: center;
+}
 
-  p {
-    padding: 15px;
-    @include flex (column);
-    text-align: center;
-    font-weight: bold;
-    font-size: 25px;
-    font-family: $font;
-    line-height: 20px;
-    margin: 0;
+.landing-logo p {
+  padding: 15px;
+  @include flex (column);
+  text-align: center;
+  font-weight: bold;
+  font-size: map-get($font-sizes, "logo");
+  font-family: $font;
+  line-height: 20px;
+  margin: 0;
 
-    span {
-      font-size: 10px;
-    }
+  span {
+    font-size: 10px;
   }
 }
+
 
 header {
   height: 600px;
@@ -37,11 +40,20 @@ header {
 
   .header_heading {
     padding: 30px 0px;
-    font-size: 40px;
+    font-size: map-get($font-sizes, "header");
     font-family: $font;
     font-weight: bold;
     max-width: 400px;
     line-height: 50px;
+
+    &::after {
+      content: "";
+      width: 170px;
+      height: 20px;
+      display: block;
+      margin: -25px 0px 0px 0px;
+      background: $underlineColor;
+    }
   }
 
   .header_text {
@@ -55,6 +67,10 @@ header {
     color: $articleTextColor;
     background: $buttonColor;
     border: none;
+
+    &:hover {
+      background: darken($color: $buttonColor, $amount: 20%);
+    }
   }
 }
 
@@ -63,9 +79,20 @@ main {
   height: 600px;
   @include flex(column);
   align-items: center;
-  font-size: 30px;
+  font-size: map-get($font-sizes, "main");
   font-family: $font;
   font-weight: bold;
+
+  .section_text {
+    &::after {
+      content: "";
+      width: 137px;
+      height: 20px;
+      display: block;
+      margin: -25px 0px 0px 168px;
+      background: $underlineColor;
+    }
+  }
 
   .section_card_wrap {
     @include flex(row);
@@ -76,14 +103,26 @@ main {
       height: 400px;
       margin: 0px 20px;
       color: $articleTextColor;
-      font-size: 14px;
+      font-size: map-get($font-sizes, "section");
       font-weight: normal;
       background: $articleBackground;
       padding: 20px;
       text-align: center;
 
+      .section_card_heading {
+        font-size: map-get($font-sizes, "banner");
+      }
+
+      .section_card_underline {
+        width: 110px;
+        height: 10px;
+        display: block;
+        margin: -12px auto;
+        background: $underlineColor;
+      }
+
       img {
-        height: 250px;
+        height: (400px - 150px);
       }
     }
   }
@@ -100,11 +139,20 @@ main {
 
     .section_banner_heading {
       margin-bottom: 0px;
+
+      &::after {
+        content: "";
+        width: 60px;
+        height: 20px;
+        display: block;
+        margin: -25px 0px 0px 125px;
+        background: $underlineColor;
+      }
     }
 
     .section_banner_text {
       color: $articleTextColor;
-      font-size: 15px;
+      font-size: map-get($font-sizes, "banner");
       margin-bottom: 40px;
     }
 
@@ -114,6 +162,10 @@ main {
       color: $articleTextColor;
       background: $buttonColor;
       border: none;
+
+      &:hover {
+        background: lighten($color: $buttonColor, $amount: 20%);
+      }
     }
   }
 }
@@ -122,16 +174,17 @@ footer {
   background: $articleBackground;
   color: $articleTextColor;
   height: 200px;
-  margin-top: 122px;
+  margin-top: 120px;
   padding-top: 100px;
 
   .footer-wrap {
-    @include flex(row);
+    @extend .landing-logo;
     justify-content: space-evenly;
-    align-items: center;
+
 
     .footer_text {
       width: 250px;
+      font-size: 13px;
     }
   }
 }
