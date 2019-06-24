@@ -1,1 +1,137 @@
-// Write your styles here
+@mixin flex($direction) {
+  display: flex;
+  flex-direction: $direction;
+}
+
+body {
+  background: $sectionBackground;
+}
+
+.landing-logo {
+  @include flex(row);
+  align-items: center;
+
+  p {
+    padding: 15px;
+    @include flex (column);
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: $font;
+    line-height: 20px;
+    margin: 0;
+
+    span {
+      font-size: 10px;
+    }
+  }
+}
+
+header {
+  height: 600px;
+  color: $headerTextColor;
+  background: no-repeat center/100% $headerBackground;
+  padding: 20px 200px;
+  @include flex(column);
+  border-bottom-right-radius: 300px;
+
+  .header_heading {
+    padding: 30px 0px;
+    font-size: 40px;
+    font-family: $font;
+    font-weight: bold;
+    max-width: 400px;
+    line-height: 50px;
+  }
+
+  .header_text {
+    white-space: pre-line;
+  }
+
+  button {
+    margin: 50px 0px;
+    width: 150px;
+    height: 50px;
+    color: $articleTextColor;
+    background: $buttonColor;
+    border: none;
+  }
+}
+
+main {
+  color: $headerTextColor;
+  height: 600px;
+  @include flex(column);
+  align-items: center;
+  font-size: 30px;
+  font-family: $font;
+  font-weight: bold;
+
+  .section_card_wrap {
+    @include flex(row);
+
+    .section_card {
+      @include flex(column);
+      width: 350px;
+      height: 400px;
+      margin: 0px 20px;
+      color: $articleTextColor;
+      font-size: 14px;
+      font-weight: normal;
+      background: $articleBackground;
+      padding: 20px;
+      text-align: center;
+
+      img {
+        height: 250px;
+      }
+    }
+  }
+
+  .section_banner {
+    background: linear-gradient(to right, $buttonColor, $EndBanerGradient);
+    @include flex(row);
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 100px;
+    width: 1000px;
+    height: 150px;
+    border-radius: 10px;
+
+    .section_banner_heading {
+      margin-bottom: 0px;
+    }
+
+    .section_banner_text {
+      color: $articleTextColor;
+      font-size: 15px;
+      margin-bottom: 40px;
+    }
+
+    button {
+      width: 150px;
+      height: 50px;
+      color: $articleTextColor;
+      background: $buttonColor;
+      border: none;
+    }
+  }
+}
+
+footer {
+  background: $articleBackground;
+  color: $articleTextColor;
+  height: 200px;
+  margin-top: 122px;
+  padding-top: 100px;
+
+  .footer-wrap {
+    @include flex(row);
+    justify-content: space-evenly;
+    align-items: center;
+
+    .footer_text {
+      width: 250px;
+    }
+  }
+}
