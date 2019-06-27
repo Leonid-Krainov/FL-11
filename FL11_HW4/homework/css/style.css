@@ -1,0 +1,226 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+header {
+  width: 100%;
+  height: 90vh;
+  background: url(../img/sample2.jpg) no-repeat center bottom;
+  background-size: cover;
+  color: #FFFFFF;
+}
+header .loginLine {
+  padding: 3%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+header .login{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.login a {
+  margin: 0% 20%;
+}
+header h1 {
+  text-align: center;
+  margin-top: 15vh;
+  font-size: 6vh;
+  line-height: 2vh;
+  font-weight: normal;  
+}
+header h1 span{  
+  font-size: 10vh;
+}
+header h5 {
+  font-weight: normal;
+  text-align: center;
+  font-size: 2vh;
+}
+header nav {
+  margin-top: 25vh;
+  display: flex;
+  justify-content: space-evenly;
+}
+header nav button {
+  color: #FFFFFF;
+  width: 15vw;
+  height: 7vh;
+  background-color:#00000070;
+}
+
+main .preview {
+  height: 25vh;
+  padding: 2%;
+  background: linear-gradient(to bottom left, #000 50%, #F3F3F3 50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.preview p {
+  font-size: 90%;
+  color: #000000;
+  max-width: 25%;
+  padding-top: 2%;
+}
+.preview p:nth-last-of-type(1) {
+  color: #FFFFFF;
+  max-width: 50%;
+  padding-top: 0%;
+}
+article {
+  text-align: center;
+  background-color: #F3F3F3;
+  display: flex;
+  flex-direction: column;
+}
+article h2 {
+  margin-top: 0%;
+  font-weight: normal;
+}
+article h2 b {
+  font-weight: bolder;
+}
+div.country {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.spain {
+  background-image: url(../img/sample-1.jpg);
+  background-size: cover;
+  width: 50%;
+  margin: 0% 3%;
+}
+.southFrance {
+  background-image: url(../img/sample-2.jpg);
+  background-size: cover;
+  width: 50%;
+  margin: 0% 3%;
+}
+.southFrance input, .spain input {
+  position: relative;
+  margin-top: 2%;
+  margin-left: 85%;
+  background-color:#00000070;
+  color: #FFFFFF;
+  border: 1px solid #ffffff;
+  padding: 1% 2%;
+}
+.southFrance p,.spain p {
+  color: #FFF;
+  position: relative;
+  margin-top: 78%;
+  margin-left: 3%;
+  text-align: start;
+}
+.featureArticle {
+  padding: 3%;
+  max-width: 41%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+section.articles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.articles .article {
+  color: #FFFFFF;
+  height: 400px;
+  width: 20%;
+  margin: 2%;
+  padding: 1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.article.greece {
+  background-image: url(../img/news-list-1.jpg);
+  background-size: cover;
+}
+.article.italy {
+  background-image: url(../img/news-list-2.jpg);
+  background-size: cover;
+}
+.article.usa {
+  background-image: url(../img/news-list-3.jpg);
+  background-size: cover;
+}
+.article.germany {
+  background-image: url(../img/news-list-4.jpg);
+  background-size: cover;
+}
+.article input {
+  align-self: flex-end;
+  width: fit-content;
+  padding: 3%;
+  background-color:#00000070;
+  color: #FFFFFF;
+  border: 1px solid #ffffff;
+}
+.article button {
+  height: 10vh;
+  color: #FFFFFF;
+  background-color: #097774cc;
+  border: none;
+}
+button.loadNews {
+  display: block;
+  margin: 3% auto;
+  color: #FFFFFF;
+  background-color: #097774;
+  border: none;
+  padding: 1% 10%;
+}
+section.subscribe {
+  background: #F3F3F3;
+  display: flex;
+  flex-direction: column;
+  padding: 3%;
+}
+.subscribe form {
+  align-self: flex-end;
+  font-size: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.subscribe form label {
+  white-space: nowrap;
+}
+.subscribe form input {
+  margin: 0% 1%;
+}
+form input.email {
+  background-color: #F3F3F3;
+  padding: 0% 2%;
+  border: 1px solid #000000;
+}
+form input.email::placeholder {
+  color: #000000;
+}
+form input.submit {
+  color: #FFFFFF;
+  background-color: #097774;
+  border: none;
+}
+footer {
+  padding: 2% 0%;
+}
+.footerBar {
+  color: #9E9E9E;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footerNav a {
+  color: #000000;
+  margin-left: 10px;
+}
