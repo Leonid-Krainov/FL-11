@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Homework 11 - TODO Cat List</title>
   <link rel="stylesheet" href="./assets/material-icons/material-icons.css">
   <link rel="stylesheet" href="./assets/styles.css">
 </head>
+
 <body>
-  <div id="root"></div>
+  <div id="root">
+    <h2>TODO Cat List</h2>
+    <p id="notification"></p>
+    <div class="input">
+      <input id="input" type="text" placeholder="Add New Action">
+      <i id="add_box" class="material-icons">add_box</i>
+    </div>
+    <div class="list">
+      <ul id="list" class="tasks"></ul>
+    </div>
+  </div>
 
   <script src="./src/app.js"></script>
 </body>
+
 </html>

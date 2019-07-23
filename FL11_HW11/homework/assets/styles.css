@@ -1,2 +1,56 @@
-/* Your styles goes here */
+#root {
+  text-align: center;
+  color: lightskyblue;
+  width: 50%;
+  margin: 0 auto;
+  font-family: 'DM Serif Display', serif;
+  padding: 1%;
+}
 
+.input {
+  border-bottom: 7px solid lightskyblue;
+  color: #80878a;
+  display: flex;
+  padding: 2% 0%;
+}
+
+.input input {
+  width: 100%;
+  border: 1px solid #80878a;
+  border-radius: 5px;
+  margin-right: 1%;
+  padding: 2%;
+}
+
+.input #add_box {
+  font-size: 3em;
+}
+
+.material-icons {
+  cursor: pointer;
+  align-self: center;
+}
+
+.list img {
+  width: 5%;
+  margin: 2%;
+}
+
+.tasks {
+  list-style: none;
+  padding: 1%;
+}
+
+li {
+  display: flex;
+  align-items: center;
+}
+li i:first-child {
+  color: #80878a;
+}
+
+li p {
+  width: 100%;
+  text-align: start;
+  margin: 0% 1%;
+}
