@@ -1,0 +1,39 @@
+#root {
+    text-align: center;
+    font-size: 30px;
+  }
+  button {
+    border-radius: 5px;
+    font-size: 25px;
+  }
+  a {
+    text-decoration: none;
+    color: green;
+  }
+  a:visited {
+    color: green;
+  }
+  .hidden {
+    display: none;
+  }
+  li {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+  }
+  .false {
+    background-image: url('img/todo-s.png');
+    width: 40px;
+    height: 40px;
+  }
+  .true {
+    background-image: url('img/done-s.png');
+    width: 40px;
+    height: 40px;
+  }
+  .remove {
+    background-image: url('img/remove-s.jpg');
+    width: 40px;
+    height: 40px;
+  }
